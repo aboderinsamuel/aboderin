@@ -1,3 +1,4 @@
+import { Link as RouterLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 interface LinkProps {
@@ -11,10 +12,10 @@ interface LinkProps {
 export function Link({
   href,
   children,
-  external,
-  active,
+  external = false,
+  active = false,
   className,
-}: LinkProps) {
+}: LinkProps): JSX.Element {
   const baseClasses = "transition-colors";
   const classes = active
     ? `${baseClasses} text-gray-900 font-medium`
@@ -50,8 +51,8 @@ export function Link({
   }
 
   return (
-    <a href={href} className={finalClasses}>
+    <RouterLink to={href} className={finalClasses}>
       {content}
-    </a>
+    </RouterLink>
   );
 }
