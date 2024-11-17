@@ -1,5 +1,6 @@
 import { ContactMe } from "../components/ContactMe";
-import comp from "../assets/comp.jpg"
+import comp from "../assets/comp.jpg";
+import { Link } from "react-router-dom"; // Import Link
 
 export function About() {
   return (
@@ -14,9 +15,7 @@ export function About() {
             alt="Profile"
             className="rounded-lg w-full h-[200px] md:h-[200px] lg:h-[500px] object-cover"
           />
-          <p className="text-sm text-gray-500 mt-2">
-            Hardware
-          </p>
+          <p className="text-sm text-gray-500 mt-2">Hardware</p>
         </div>
         <div className="space-y-6">
           <p className="text-lg">
@@ -30,9 +29,9 @@ export function About() {
             (API/MicroServices/DB).
           </p>
           <p className="text-lg">
-            Another of many technical skillsets is Fullstack Development - (Frontend
-            + Backend, Python, Java & C++) - creating impressive (UI), Fast
-            (Performance) and Scalable (Backend) applications, some even
+            Another of many technical skillsets is Fullstack Development -
+            (Frontend + Backend, Python, Java & C++) - creating impressive (UI),
+            Fast (Performance) and Scalable (Backend) applications, some even
             integrated with machine learning systems.
           </p>
           <p className="text-lg">
@@ -47,15 +46,13 @@ export function About() {
               GitHub @aboderinsamuel
             </a>
           </p>
-          <p className="text-lg">
-            die hard Arsenal fan 😶‍🌫️
-          </p>
-          <a
-            href="/research"
+          <p className="text-lg">die hard Arsenal fan 😶‍🌫️</p>
+          <Link
+            to="/research"
             className="inline-block mt-4 px-6 py-2 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-colors"
           >
             Research ↗
-          </a>
+          </Link>
         </div>
       </div>
       <ContactMe />
