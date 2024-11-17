@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ResearchCard } from "../components/ResearchCard";
 import { ContactMe } from "../components/ContactMe";
+import { useEffect } from "react";
 
 interface ResearchProject {
   title: string;
@@ -10,6 +11,9 @@ interface ResearchProject {
 }
 
 export function Research() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const projects: ResearchProject[] = [
     {
       title:
@@ -49,7 +53,9 @@ export function Research() {
       className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10"
     >
       <div className="mb-10">
-        <h1 className="text-4xl font-serif mb-6 flex justify-center">Research</h1>
+        <h1 className="text-4xl font-serif mb-6 flex justify-center">
+          Research
+        </h1>
         <p className="text-base sm:text-lg text-gray-600 text-center">
           Versatile when it comes to research - primary focus on Core ML,
           Reinforcement & Deep Learning Models - but I use my technical prowess
