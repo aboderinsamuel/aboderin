@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -14,29 +14,54 @@ export function Header(): JSX.Element {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const menuRef = useRef<HTMLDivElement | null>(null); // Ref for the mobile menu
+  const headerRef = useRef<HTMLDivElement | null>(null); // Ref for the whole header
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node) // Close if click is outside of the header
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // Helper component for navigation links
   const NavLink = ({ to, children }: NavLinkProps): JSX.Element => (
-    <Link 
+    <Link
       to={to}
       className={`transition-colors ${
         currentPath === to
           ? "text-gray-900 font-medium"
           : "text-gray-900 hover:text-gray-700 underline decoration-gray-300 underline-offset-4"
       }`}
+      onClick={() => setIsMenuOpen(false)}
     >
       {children}
     </Link>
   );
 
   return (
-    <header className="relative py-6 px-4 sm:px-8">
+    <header ref={headerRef} className="relative py-6 px-4 sm:px-8">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src={cat} className="w-8 h-8 rounded-sm" alt="Profile" />
+          <Link to="/" className="cursor-pointer">
+            <img src={cat} className="w-8 h-8 rounded-sm" alt="Profile" />
+          </Link>
           <div>
-            <h3 className="font-medium">Samuel Aboderin</h3>
-            <p className="text-sm text-gray-600">Software Engineer (ML)</p>
+            <Link to="/" className="cursor-pointer">
+              <h3 className="font-medium">Samuel Aboderin</h3>
+
+              <p className="text-sm text-gray-600">Software Engineer (ML)</p>
+            </Link>
           </div>
         </div>
 
@@ -74,6 +99,7 @@ export function Header(): JSX.Element {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden absolute top-full left-0 right-0 bg-white border-b z-50"
+            ref={menuRef} // Attach ref to the menu
           >
             <div className="flex flex-col p-4 space-y-4">
               <NavLink to="/">Home</NavLink>
