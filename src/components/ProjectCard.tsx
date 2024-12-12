@@ -16,7 +16,7 @@ export function ProjectCard({
   technologies,
 }: Project) {
   return (
-    <div className="group border border-gray-600 rounded-lg p-3 h-[400px] transition-all hover:border-gray-800">
+    <div className="group border border-gray-600 rounded-lg p-3 h-[420px] transition-all hover:border-gray-800">
       <div className="flex justify-between items-start mb-2">
         <div>
           <div className="text-sm text-gray-600 mb-1">{category}</div>
