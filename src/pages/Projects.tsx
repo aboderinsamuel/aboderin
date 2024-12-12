@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { ProjectCard } from '../components/ProjectCard';
-import { Search } from 'lucide-react';
-import { ContactMe } from '../components/ContactMe';
+import { useState } from "react";
+import { ProjectCard } from "../components/ProjectCard";
+import { Search } from "lucide-react";
+import { ContactMe } from "../components/ContactMe";
 
 const CATEGORIES = [
   "All",
@@ -14,51 +14,65 @@ const CATEGORIES = [
   "Data Analytics & PreProcessing",
   "Hardware Engineering Integrations",
   "Frontend & UI Development",
-  "Libraries / Packages / Modules / Applications / Frameworks"
+  "Libraries / Packages / Modules / Applications / Frameworks",
 ];
 
 const PROJECTS = [
   {
-    title: "Sonora - Space tailored digital music platform",
-    description: "Space tailored platform for beat producers and sound creators to showcase their work. Designed for artists and creators looking for high-quality beats, ambient sounds, content creators, or anyone in need of relaxing, immersive audio.",
+    title: "Sonora - Space tailored digital music",
+    description:
+      "Space tailored platform for beat producers and sound creators to showcase their work. Designed for artists and creators looking for high-quality beats, ambient sounds, content creators, or anyone in need of relaxing, immersive audio.",
     technologies: ["TypeScript", "Jamendo API", "Tailwind CSS"],
     category: "Full Stack Development",
-    link: "https://sonora01.netlify.app/"
+    link: "https://sonora01.netlify.app/",
+    image:
+      "https://play-lh.googleusercontent.com/kDXJ6XA2Cm47lzDCvvu6HNCu0PWmTwZKiY0ldCWrCgXGT3Ms-lbP_WN1v5vknspnLT15=w526-h296-rw",
   },
   {
     title: "MetripMarigold Store",
-    description: "modern, SaaS-driven platform that provides users with a streamlined online shopping experience for farm products. Admins can manage the product listings, while customers can browse, filter, and shop with ease.",
-    technologies: ["React","Express", "mongoDB", "node.js", "Tailwind CSS"],
+    description:
+      "Modern SaaS-driven platform that provides users with a streamlined online shopping experience for farm products. Admins can manage the product listings, while customers can browse, filter, and shop with ease.",
+    technologies: ["React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
     category: "Full Stack Development",
-    link: "https://github.com/aboderinsamuel/MetripMarigold-Online-Store"
+    link: "https://github.com/aboderinsamuel/MetripMarigold-Online-Store",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFKsLDDKuM8WP8z_xDV0_ykgultzpc01DNdQ&s",
   },
   {
     title: "Image Classifier AI",
-    description: "Image classification model using Python and TensorFlow, achieving 95% accuracy on the CIFAR-10 dataset. Utilized Convolutional Neural Networks (CNNs) to effectively categorize diverse image datasets, improving classification speed by 30%.",
-    technologies: ["Pytorch","Python", " Scikit-Learn", "shell script", "CNN"],
+    description:
+      "Image classification model using Python and TensorFlow, achieving 95% accuracy on the CIFAR-10 dataset. Utilized Convolutional Neural Networks (CNNs) to effectively categorize diverse image datasets, improving classification speed by 30%.",
+    technologies: ["PyTorch", "Python", "Scikit-Learn", "Shell Script", "CNN"],
     category: "Machine Learning / Artificial Intelligence",
-    link: "https://github.com/aboderinsamuel/ImageClassifier-"
-  }
-  // Add more projects as needed
+    link: "https://github.com/aboderinsamuel/ImageClassifier-",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Spectrogram-19thC.png/400px-Spectrogram-19thC.png",
+  },
 ];
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProjects = PROJECTS.filter(project => {
-    const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredProjects = PROJECTS.filter((project) => {
+    const matchesCategory =
+      selectedCategory === "All" || project.category === selectedCategory;
+    const matchesSearch =
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
   return (
-    <main className="max-w-6xl mx-auto px-8 py-12">
-      <div className="mb-12">
-        <h1 className="text-6xl font-serif mb-4 flex justify-center">Projects</h1>
+    <main className="max-w-4xl mx-auto px-6 py-8">
+      <div className="mb-5">
+        <h1 className="text-5xl font-serif mb-2 flex justify-center">
+          Projects
+        </h1>
         <p className="text-gray-600 text-center max-w-2xl mx-auto">
-        "But, if you make yourself more than just a man, if you devote yourself to an ideal, and if they can't stop you, then you become something else entirely". - Ra’s al Ghul 
+          "But, if you make yourself more than just a man, if you devote
+          yourself to an ideal, and if they can't stop you, then you become
+          something else entirely". - Ra’s al Ghul
         </p>
       </div>
 
@@ -80,8 +94,8 @@ export function Projects() {
             onClick={() => setSelectedCategory(category)}
             className={`px-3 py-1 text-sm border rounded-full transition-colors cursor-pointer ${
               selectedCategory === category
-                ? 'bg-gray-900 text-white'
-                : 'border-gray-200 hover:bg-gray-50'
+                ? "bg-gray-900 text-white"
+                : "border-gray-200 hover:bg-gray-50"
             }`}
           >
             {category}
@@ -89,9 +103,9 @@ export function Projects() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-12 pt-0">
         {filteredProjects.map((project, index) => (
-          <a 
+          <a
             key={index}
             href={project.link}
             target="_blank"
