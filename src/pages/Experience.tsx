@@ -15,7 +15,7 @@ export function Experience() {
     {
       company: "Shopbelly (Startup)",
       role: "Founder & Backend Developer",
-      period: "Jan 2025 – Present | Lagos, Nigeria",
+      period: "May 2025 – Present | Lagos, Nigeria",
       description:
         "Founded and led the design and backend development of a cloud-native e-commerce platform. Built backend services with Python/Node.js, PostgreSQL, and Docker; deployed on AWS using CI/CD. Implemented scalable microservice APIs for product, vendor, and order management.",
       logo: startUpLogo,
