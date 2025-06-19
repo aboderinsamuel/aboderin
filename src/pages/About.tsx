@@ -19,39 +19,30 @@ export function About() {
         </div>
         <div className="space-y-6">
           <p className="text-lg">
-            I'm a Software Engineer with a background in Computer Engineering. I
-            am currently an undergraduate student at the University of Lagos,
-            pursuing a bachelors degree in Computer Engineering. Personally, i
-            focus on Software Enineering with/and Artificial Intelligence.
+            I'm a Computer Engineering student, software engineer, and
+            entrepreneur passionate about building scalable web applications and
+            cloud-native systems. Founder of Shopbelly, an e-commerce startup,
+            and experienced in backend, DevOps, and cloud computing.
           </p>
           <p className="text-lg">
-            Presently, I mainly work with Core Frontend and Backend Systems
-            (API/MicroServices/DB).
+            Technical skills: Python, JavaScript/TypeScript, Node.js, Spring
+            Boot, AWS, Docker, PostgreSQL, MongoDB, CI/CD, Linux.
           </p>
           <p className="text-lg">
-            Another of many technical skillsets is Fullstack Development -
-            (Frontend + Backend, Python, Java & C++) - creating impressive (UI),
-            Fast (Performance) and Scalable (Backend) applications, some even
-            integrated with machine learning systems.
+            Leadership & Startup: Founded and led Shopbelly, designing and
+            deploying scalable backend services and microservice APIs on AWS.
+            Experienced in agile, DevOps, and open-source contributions.
           </p>
           <p className="text-lg">
-            Big fan of opensource development, I have built several libraries,
-            modules, packages & tools, in database, algorithms, web-frameworks &
-            machine learning/ai fields all opensourced{" "}
-            <a
-              href="https://github.com/aboderinsamuel
-"
-              className="text-blue-600 hover:underline"
-            >
-              GitHub @aboderinsamuel
-            </a>
+            Open-source developer and active tech community member. Pursuing a
+            tech career in Japan.
           </p>
           <p className="text-lg">die hard Arsenal fan 😶‍🌫️</p>
           <Link
-            to="/research"
+            to="/experience"
             className="inline-block mt-4 px-6 py-2 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-colors"
           >
-            Research ↗
+            Experience ↗
           </Link>
         </div>
       </div>

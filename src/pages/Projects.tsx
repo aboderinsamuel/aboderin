@@ -2,6 +2,9 @@ import { useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { Search } from "lucide-react";
 import { ContactMe } from "../components/ContactMe";
+import compImg from "../assets/comp.jpg";
+import dragImg from "../assets/drag.jpg";
+import gdscImg from "../assets/gdsc.png";
 
 const CATEGORIES = [
   "All",
@@ -18,6 +21,33 @@ const CATEGORIES = [
 ];
 
 const PROJECTS = [
+  {
+    title: "Shopbelly (Startup)",
+    description:
+      "Cloud-native e-commerce platform. Led backend development, built scalable microservice APIs for product, vendor, and order management. Deployed on AWS with CI/CD. Founder & Backend Developer.",
+    technologies: ["Python", "Node.js", "PostgreSQL", "Docker", "AWS", "CI/CD"],
+    category: "Startup / Backend Systems",
+    link: "https://shopbelly.vercel.app/",
+    image: compImg,
+  },
+  {
+    title: "SalesFlow Analytics",
+    description:
+      "Full-stack analytics dashboard with Python ETL pipelines. Deployed on AWS EC2 with Docker, reducing data latency by 85%.",
+    technologies: ["Next.js", "Python", "AWS EC2", "Docker", "PostgreSQL"],
+    category: "Full Stack Development",
+    link: "",
+    image: dragImg,
+  },
+  {
+    title: "Inventory Management System",
+    description:
+      "Inventory system handling 100+ daily transactions. Deployed on AWS with CI/CD and infrastructure-as-code practices.",
+    technologies: ["Next.js", "Prisma ORM", "RDS", "Amplify", "CI/CD"],
+    category: "Full Stack Development",
+    link: "",
+    image: gdscImg,
+  },
   {
     title: "Sonora - Space tailored digital music",
     description:
@@ -72,7 +102,7 @@ export function Projects() {
         <p className="text-gray-600 text-center max-w-2xl mx-auto">
           "But, if you make yourself more than just a man, if you devote
           yourself to an ideal, and if they can't stop you, then you become
-          something else entirely". - Ra’s al Ghul
+          something else entirely". - Ra's al Ghul
         </p>
       </div>
 

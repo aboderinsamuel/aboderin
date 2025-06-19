@@ -3,6 +3,7 @@ import { Link } from "../components/Link";
 import { ContactMe } from "../components/ContactMe";
 import { MicrosoftIcon } from "../components/icons/Microsoft";
 import pic from "../assets/pic.jpg";
+import compImg from "../assets/comp.jpg";
 
 export function Home() {
   return (
@@ -21,51 +22,28 @@ export function Home() {
             </h1>
             <div className="space-y-4 text-base sm:text-lg text-gray-600">
               <p>
-                Personal Research@{" "}
-                <Link
-                  href="https://medium.com/@aboderinseun01"
-                  external
-                  className="text-blue-500 bg-amber-50 font-medium"
-                >
-                  medium
-                </Link>{" "}
-                (ML + Data with Python)@{" "}
-                <Link
-                  href="https://github.com/aboderinsamuel"
-                  external
-                  className="text-blue-500 bg-amber-50 font-medium"
-                >
-                  Udacity
-                </Link>{" "}
-                SWE Intern.@{" "}
-                <Link
-                  href="https://www.marigoldsignatureng.com/"
-                  external
-                  className="text-blue-500 bg-amber-50 font-medium"
-                >
-                  Marigold Signature
-                </Link>{" "}
-                Frontend Eng.@{" "}
-                <Link
-                  href="https://gdg.community.dev/gdg-on-campus-university-of-lagos-lagos-nigeria/"
-                  external
-                  className="text-blue-500 bg-amber-50 font-medium"
-                >
-                  @Google Developers Student Club Unilag
-                </Link>{" "}
-                3D design Enthusiast @{" "}
-                <Link
-                  href="https://threejs.org/"
-                  external
-                  className="text-blue-500 bg-amber-50 font-medium"
-                >
-                  three.js
-                </Link>
-                .
+                <span className="font-semibold">Technical Skills:</span> Python,
+                Java, JavaScript, TypeScript, SQL, C++, Go (basic), Node.js,
+                Spring Boot, REST APIs, AWS (EC2, S3, RDS), Docker, CI/CD,
+                PostgreSQL, MongoDB, MySQL, Linux, Git, Agile.
               </p>
               <p>
-                Software Engineer - Building Frontend Apps, Backend +
-                Infrastructure Systems & ML Architectures + Models (Light Work).
+                <span className="font-semibold">Startup Founder:</span> Building Shopbelly, a cloud-native e-commerce platform
+                (Python/Node.js, PostgreSQL, Docker, AWS). Led backend and
+                DevOps, implemented scalable microservice APIs.{" "}
+                <a
+                  href="https://shopbelly.vercel.app/"
+                  className="text-blue-500 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Shopbelly
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold">Professional Experience:</span>{" "}
+                Full-Stack Developer at Coach John (React, Python, AWS, Docker).
+                SWE Intern at Marigold Signature (Node.js, PostgreSQL, CI/CD).
               </p>
               <p className="italic">
                 The only way to do great work is to love what you do.
@@ -116,7 +94,7 @@ export function Home() {
                   Machine Learning
                 </h3>
                 <p className="text-sm sm:text-base text-gray-600">
-                  Deep dive into my ML research and implementations
+                  Deep dive into my ML experience and implementations
                 </p>
               </motion.div>
             </Link>
@@ -142,7 +120,7 @@ export function Home() {
                 className="p-4 sm:p-6 border rounded-lg hover:shadow-lg transition-all"
               >
                 <h3 className="text-lg sm:text-xl font-medium mb-2">
-                 3D Portfolio
+                  3D Portfolio
                 </h3>
                 <p className="text-sm sm:text-base text-gray-600">
                   Explore my software development projects and contributions
@@ -152,6 +130,52 @@ export function Home() {
           </div>
         </motion.div>
       </section>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="mt-12"
+      >
+        <div className="p-6 border rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6 bg-white">
+          <img
+            src={compImg}
+            alt="Shopbelly Startup"
+            className="w-32 h-32 object-cover rounded-lg"
+          />
+          <div>
+            <h2 className="text-2xl font-bold mb-2">Shopbelly (Startup)</h2>
+            <p className="mb-2">
+              Cloud-native e-commerce platform. Designed and deployed scalable
+              backend services and microservice APIs on AWS.{" "}
+              <a
+                href="https://shopbelly.vercel.app/"
+                className="text-blue-500 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Shopbelly
+              </a>
+            </p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              <span className="bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-full text-xs">
+                Python
+              </span>
+              <span className="bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-full text-xs">
+                Node.js
+              </span>
+              <span className="bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-full text-xs">
+                PostgreSQL
+              </span>
+              <span className="bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-full text-xs">
+                Docker
+              </span>
+              <span className="bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-full text-xs">
+                AWS
+              </span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
       <ContactMe />
     </motion.main>
   );

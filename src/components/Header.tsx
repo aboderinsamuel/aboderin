@@ -69,7 +69,7 @@ export function Header(): JSX.Element {
         <nav className="hidden md:flex items-center gap-6">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/research">Research</NavLink>
+          <NavLink to="/experience">Experience</NavLink>
           <NavLink to="/projects">Projects</NavLink>
         </nav>
 
@@ -104,7 +104,7 @@ export function Header(): JSX.Element {
             <div className="flex flex-col p-4 space-y-4">
               <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About</NavLink>
-              <NavLink to="/research">Research</NavLink>
+              <NavLink to="/experience">Experience</NavLink>
               <NavLink to="/projects">Projects</NavLink>
             </div>
           </motion.nav>

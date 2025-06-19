@@ -8,7 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { Research } from "./pages/Research";
+import { Experience } from "./pages/Experience";
 import { Projects } from "./pages/Projects";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -20,7 +20,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/research" element={<Research />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </AnimatePresence>
