@@ -3,7 +3,7 @@ import { Link } from "../components/Link";
 import { ContactMe } from "../components/ContactMe";
 import { MicrosoftIcon } from "../components/icons/Microsoft";
 import pic from "../assets/pic.jpg";
-import compImg from "../assets/comp.jpg";
+import cart from "../assets/cart.avif";
 
 export function Home() {
   return (
@@ -28,19 +28,19 @@ export function Home() {
                 PostgreSQL, MongoDB, MySQL, Linux, Git, Agile.
               </p>
               <p>
-                <span className="font-semibold">Startup Founder:</span> Building Shopbelly, a cloud-native e-commerce platform
-                (Python/Node.js, PostgreSQL, Docker, AWS). Led backend and
-                DevOps, implemented scalable microservice APIs.{" "}
+                <span className="font-semibold">Startup Founder:</span> Built{" "}
                 <a
                   href="https://shopbelly.vercel.app/"
                   className="text-blue-500 underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Visit Shopbelly
+                  Shopbelly
                 </a>
+                , a cloud-native e-commerce platform with Python/Node.js and
+                AWS.
               </p>
-              <p>
+              <p className="hidden sm:block">
                 <span className="font-semibold">Professional Experience:</span>{" "}
                 Full-Stack Developer at Coach John (React, Python, AWS, Docker).
                 SWE Intern at Marigold Signature (Node.js, PostgreSQL, CI/CD).
@@ -93,8 +93,11 @@ export function Home() {
                 <h3 className="text-lg sm:text-xl font-medium mb-2">
                   Machine Learning
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600 hidden sm:block">
                   Deep dive into my ML experience and implementations
+                </p>
+                <p className="text-sm sm:text-base text-gray-600 sm:hidden">
+                  ML projects and implementations
                 </p>
               </motion.div>
             </Link>
@@ -108,8 +111,11 @@ export function Home() {
                   <h3 className="text-lg sm:text-xl font-medium mb-2">
                     Microsoft Profile
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600 hidden sm:block">
                     Professional achievements and contributions
+                  </p>
+                  <p className="text-sm sm:text-base text-gray-600 sm:hidden">
+                    Professional work
                   </p>
                 </div>
               </motion.div>
@@ -122,8 +128,11 @@ export function Home() {
                 <h3 className="text-lg sm:text-xl font-medium mb-2">
                   3D Portfolio
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600 hidden sm:block">
                   Explore my software development projects and contributions
+                </p>
+                <p className="text-sm sm:text-base text-gray-600 sm:hidden">
+                  3D software projects
                 </p>
               </motion.div>
             </Link>
@@ -138,7 +147,7 @@ export function Home() {
       >
         <div className="p-6 border rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6 bg-white">
           <img
-            src={compImg}
+            src={cart}
             alt="Shopbelly Startup"
             className="w-32 h-32 object-cover rounded-lg"
           />
@@ -146,15 +155,7 @@ export function Home() {
             <h2 className="text-2xl font-bold mb-2">Shopbelly (Startup)</h2>
             <p className="mb-2">
               Cloud-native e-commerce platform. Designed and deployed scalable
-              backend services and microservice APIs on AWS.{" "}
-              <a
-                href="https://shopbelly.vercel.app/"
-                className="text-blue-500 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Shopbelly
-              </a>
+              backend services and microservice APIs on AWS.
             </p>
             <div className="flex flex-wrap gap-2 mt-2">
               <span className="bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-full text-xs">
