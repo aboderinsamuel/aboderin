@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import { ContactMe } from "../components/ContactMe";
 import dragImg from "../assets/drag.jpg";
 import gdscImg from "../assets/gdsc.png";
-import belly from "../assets/belly.png;
+import belly from "../assets/belly.png";
 
 const CATEGORIES = [
   "All",
