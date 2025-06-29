@@ -30,7 +30,7 @@ export function Home() {
               <p>
                 <span className="font-semibold">Startup Founder:</span> Built{" "}
                 <a
-                  href="https://shopbelly.vercel.app/"
+                  href="https://belly-one.vercel.app/"
                   className="text-blue-500 underline"
                   target="_blank"
                   rel="noopener noreferrer"
