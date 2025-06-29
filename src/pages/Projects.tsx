@@ -27,7 +27,7 @@ const PROJECTS = [
       "Cloud-native e-commerce platform. Led backend development, built scalable microservice APIs for product, vendor, and order management. Deployed on AWS with CI/CD. Founder & Backend Developer.",
     technologies: ["Python", "Node.js", "PostgreSQL", "Docker", "AWS", "CI/CD"],
     category: "Startup / Backend Systems",
-    link: "https://shopbelly.vercel.app/",
+    link: "https://belly-one.vercel.app/",
     image: compImg,
   },
   {
