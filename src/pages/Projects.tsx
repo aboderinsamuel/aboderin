@@ -2,9 +2,9 @@ import { useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { Search } from "lucide-react";
 import { ContactMe } from "../components/ContactMe";
-import compImg from "../assets/comp.jpg";
 import dragImg from "../assets/drag.jpg";
 import gdscImg from "../assets/gdsc.png";
+import belly from "../assets/belly.png;
 
 const CATEGORIES = [
   "All",
@@ -28,7 +28,7 @@ const PROJECTS = [
     technologies: ["Python", "Node.js", "PostgreSQL", "Docker", "AWS", "CI/CD"],
     category: "Startup / Backend Systems",
     link: "https://belly-one.vercel.app/",
-    image: compImg,
+    image: belly,
   },
   {
     title: "SalesFlow Analytics",
