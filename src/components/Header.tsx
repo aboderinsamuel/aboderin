@@ -118,7 +118,8 @@ export function Header(): JSX.Element {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-blue-700 text-white rounded-full font-semibold text-base shadow hover:bg-blue-800 transition-colors border border-blue-800 text-center"
+                className="transition-colors text-gray-900 hover:text-gray-700 underline decoration-gray-300 underline-offset-4 text-base font-normal"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Resume
               </a>
