@@ -10,6 +10,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Experience } from "./pages/Experience";
 import { Projects } from "./pages/Projects";
+import { Certs } from "./pages/Certs";
 import { Analytics } from "@vercel/analytics/react";
 
 function AnimatedRoutes() {
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/certs" element={<Certs />} />
       </Routes>
     </AnimatePresence>
   );

@@ -71,6 +71,7 @@ export function Header(): JSX.Element {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/experience">Experience</NavLink>
           <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/certs">Certs</NavLink>
           <a
             href="/resume.pdf"
             target="_blank"
@@ -114,6 +115,7 @@ export function Header(): JSX.Element {
               <NavLink to="/about">About</NavLink>
               <NavLink to="/experience">Experience</NavLink>
               <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/certs">Certs</NavLink>
               <a
                 href="/resume.pdf"
                 target="_blank"
