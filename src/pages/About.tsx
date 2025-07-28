@@ -34,8 +34,7 @@ export function About() {
             Experienced in agile, DevOps, and open-source contributions.
           </p>
           <p className="text-lg">
-            Open-source developer and active tech community member. Pursuing a
-            tech career in Japan.
+            Open-source developer and active tech community member.
           </p>
           <p className="text-lg">die hard Arsenal fan 😶‍🌫️</p>
           <Link
