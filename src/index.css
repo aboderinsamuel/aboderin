@@ -4,8 +4,11 @@
 
 @layer base {
   body {
-    @apply antialiased text-gray-900;
+    @apply antialiased text-gray-900 bg-white selection:bg-gray-900 selection:text-white;
   }
+  h1 { @apply font-serif tracking-tight; }
+  h2 { @apply font-serif tracking-tight; }
+  a { @apply underline decoration-gray-300 underline-offset-4 hover:text-gray-700; }
 }
 
 @layer components {
@@ -13,3 +16,5 @@
     @apply text-gray-900 underline decoration-gray-300 underline-offset-4 hover:text-gray-700;
   }
 }
+
+/* Flip cards removed from Me page */

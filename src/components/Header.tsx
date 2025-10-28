@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import cat from "../assets/drag.jpg";
 
 interface NavLinkProps {
   to: string;
@@ -14,8 +12,8 @@ export function Header(): JSX.Element {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const menuRef = useRef<HTMLDivElement | null>(null); // Ref for the mobile menu
-  const headerRef = useRef<HTMLDivElement | null>(null); // Ref for the whole header
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const headerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -34,14 +32,13 @@ export function Header(): JSX.Element {
     };
   }, []);
 
-  // Helper component for navigation links
   const NavLink = ({ to, children }: NavLinkProps): JSX.Element => (
     <Link
       to={to}
       className={`transition-colors ${
         currentPath === to
-          ? "text-gray-900 font-medium"
-          : "text-gray-900 hover:text-gray-700 underline decoration-gray-300 underline-offset-4"
+          ? "text-gray-900"
+          : "text-gray-900 hover:text-gray-700 underline"
       }`}
       onClick={() => setIsMenuOpen(false)}
     >
@@ -52,43 +49,23 @@ export function Header(): JSX.Element {
   return (
     <header ref={headerRef} className="relative py-6 px-4 sm:px-8">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link to="/" className="cursor-pointer">
-            <img src={cat} className="w-8 h-8 rounded-sm" alt="Profile" />
-          </Link>
-          <div>
-            <Link to="/" className="cursor-pointer">
-              <h3 className="font-medium">Samuel Aboderin</h3>
-              <p className="text-sm text-gray-600">Software Engineer</p>
-            </Link>
-          </div>
-        </div>
+        <Link to="/" className="cursor-pointer">
+          <h3 className="font-medium">Samuel Aboderin</h3>
+        </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/experience">Experience</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/certs">My Certifications</NavLink>
+          <NavLink to="/me">me</NavLink>
+          <NavLink to="/credentials">credentials</NavLink>
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 px-4 py-1.5 bg-blue-700 text-white rounded-full font-semibold text-sm shadow hover:bg-blue-800 transition-colors border border-blue-800"
+            className="text-gray-900 hover:text-gray-700 underline"
           >
-            Resume
+            resume
           </a>
         </nav>
 
-        {/* Status Badge */}
-        <div className="hidden md:block bg-amber-50 px-3 py-1.5 rounded-full">
-          <p className="text-amber-900 font-medium tracking-wide text-sm whitespace-nowrap">
-            🚀 Somewhere building stuff
-          </p>
-        </div>
-
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -99,35 +76,26 @@ export function Header(): JSX.Element {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.nav
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-white border-b z-50"
-            ref={menuRef} // Attach ref to the menu
-          >
-            <div className="flex flex-col p-4 space-y-4">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/experience">Experience</NavLink>
-              <NavLink to="/projects">Projects</NavLink>
-              <NavLink to="/certs">Certs</NavLink>
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors text-gray-900 hover:text-gray-700 underline decoration-gray-300 underline-offset-4 text-base font-normal"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Resume
-              </a>
-            </div>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+      {isMenuOpen && (
+        <nav
+          className="md:hidden absolute top-full left-0 right-0 bg-white border-b z-50"
+          ref={menuRef}
+        >
+          <div className="flex flex-col p-4 space-y-4">
+            <NavLink to="/me">me</NavLink>
+            <NavLink to="/credentials">credentials</NavLink>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-gray-700 underline"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              resume
+            </a>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
