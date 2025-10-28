@@ -20,7 +20,7 @@ export function Me() {
         <ul className="text-gray-700 space-y-2">
           <li>
             <span className="font-medium">Shopbelly</span> — Founder & Backend ·
-            2025–Now
+            2025–2025
             <div className="text-sm">
               Cloud‑native commerce; Python/Node, PostgreSQL, Docker, AWS.
             </div>
@@ -34,7 +34,7 @@ export function Me() {
           </li>
           <li>
             <span className="font-medium">Coach John</span> — Full‑Stack ·
-            2025–Now
+            2025–2025
             <div className="text-sm">
               LMS on React + Python; AWS, Docker, CI/CD.
             </div>
@@ -48,7 +48,7 @@ export function Me() {
           </li>
           <li>
             <span className="font-medium">GDSC Unilag</span> — Frontend Engineer
-            · 2023–Now
+            · 2023–2023
             <div className="text-sm">
               Community projects, workshops and hackathons.
             </div>
