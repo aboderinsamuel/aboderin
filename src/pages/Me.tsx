@@ -13,51 +13,100 @@ export function Me() {
     >
       <h1 className="text-4xl sm:text-5xl mb-8">Experience & Projects</h1>
 
-      {/* Experience first */}
-      {/* Experience list */}
+      {/* Experience */}
       <section className="space-y-2 mb-12">
         <h2 className="text-2xl">Experience</h2>
-        <ul className="text-gray-700 space-y-2">
-          <li>
-            <span className="font-medium">Shopbelly</span> — Founder & Backend ·
-            2025–2025
-            <div className="text-sm">
-              Cloud‑native commerce; Python/Node, PostgreSQL, Docker, AWS.
+        <div className="text-gray-700 space-y-6">
+          <div>
+            <div className="font-medium">
+              Coach John — Software & Data Engineer Intern
             </div>
-          </li>
-          <li>
-            <span className="font-medium">Westhill Community Support</span> —
-            Frontend/Platform · 2025–2025
-            <div className="text-sm">
-              Next.js/React, IA/accessibility, deployment & monitoring.
+            <div className="text-sm text-gray-600">
+              Leadership & Community Engagement Initiative · June 2025 – August
+              2025 · Remote (Toronto, Canada)
             </div>
-          </li>
-          <li>
-            <span className="font-medium">Coach John</span> — Full‑Stack ·
-            2025–2025
-            <div className="text-sm">
-              LMS on React + Python; AWS, Docker, CI/CD.
+            <ul className="list-disc pl-5 text-sm mt-2 space-y-1">
+              <li>
+                Collaborated in a multicultural Agile team to re-architect a
+                cloud analytics platform; doubled system uptime and improved
+                mentor access for 30+ users.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="font-medium">
+              Acway Alliance — Data Engineer Intern
             </div>
-          </li>
-          <li>
-            <span className="font-medium">Marigold Signature</span> — SWE Intern
-            · 2023–2024
-            <div className="text-sm">
-              Node.js/PostgreSQL; auth, payments, testing, monitoring.
+            <div className="text-sm text-gray-600">
+              February 2025 – April 2025 · Remote (Toronto, Canada)
             </div>
-          </li>
-          <li>
-            <span className="font-medium">GDSC Unilag</span> — Frontend Engineer
-            · 2023–2023
-            <div className="text-sm">
-              Community projects, workshops and hackathons.
+            <ul className="list-disc pl-5 text-sm mt-2 space-y-1">
+              <li>
+                Developed PostgreSQL ETL pipelines, enabling analysis of 10K+
+                project records for impact evaluation across international NGO
+                teams.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="font-medium">
+              Marigold Signature — Backend Engineer Intern
             </div>
-          </li>
-        </ul>
+            <div className="text-sm text-gray-600">
+              November 2023 – December 2023 · Lagos, Nigeria
+            </div>
+            <ul className="list-disc pl-5 text-sm mt-2 space-y-1">
+              <li>
+                Championed end-to-end error tracking, decreasing bug-fix time
+                and enhancing customer trust through stable releases.
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      {/* Flip-cards removed per request */}
-      {/* Full projects list */}
+      {/* Education */}
+      <section className="space-y-2 mb-8">
+        <h2 className="text-2xl">Education</h2>
+        <div className="text-gray-700">
+          <div className="font-medium">
+            University of Lagos Akoka, Lagos, Nigeria
+          </div>
+          <div>
+            BSc. Computer Engineering — Second Class Upper (UK 2:1 Equivalent)
+          </div>
+          <div className="text-sm">January 2022 – May 2027 (Expected)</div>
+          <div className="text-sm mt-2">
+            <span className="font-medium">Relevant Coursework:</span> Data
+            Structures & Algorithms, Distributed Systems, Operating Systems,
+            Computer Networks, Computer Architecture, Machine Learning,
+            Financial Engineering
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Skills (compact) */}
+      <section className="space-y-3 mb-10">
+        <h2 className="text-2xl">Technical Skills</h2>
+        <div className="text-gray-700 text-sm space-y-1">
+          <div>
+            <span className="font-medium">Languages:</span> Python · C++ · Java
+            · SQL · TypeScript
+          </div>
+          <div>
+            <span className="font-medium">AI / ML:</span> PyTorch · TensorFlow ·
+            scikit-learn
+          </div>
+          <div>
+            <span className="font-medium">Tools:</span> Docker · AWS · Node.js ·
+            React · Git · PostgreSQL · Redis · Terraform
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
       <section className="space-y-2 mb-10">
         <h2 className="text-2xl">Projects</h2>
         <ul className="list-disc pl-6 text-gray-700 space-y-1">
@@ -146,41 +195,47 @@ export function Me() {
             — ₦1,000,000 & $5,000 AWS. Built an AI‑powered platform transforming
             creative industry distribution, collaborating across 5+ countries.
           </li>
+          <li>
+            <span className="font-medium">Gold — High School Chess</span> —
+            Inter-house Sports.
+          </li>
         </ul>
       </section>
 
-      {/* Technical Skills */}
-      <section className="space-y-3 mb-12">
-        <h2 className="text-2xl">Technical Skills</h2>
-        <div className="space-y-2 text-gray-700">
-          <div>
-            <span className="font-medium">Languages:</span> Python, C++, Java,
-            SQL, TypeScript
-          </div>
-          <div>
-            <span className="font-medium">AI/ML:</span> PyTorch, TensorFlow,
-            scikit‑learn
-          </div>
-          <div>
-            <span className="font-medium">Frameworks/Tools:</span> Docker, AWS
-            (EC2, S3), Node.js, React, Jenkins, Git, PostgreSQL, Terraform,
-            Redis
-          </div>
-          <div>
-            <span className="font-medium">Concepts:</span> Cloud Architecture,
-            Microservices, Data Pipelines, Distributed Systems, Agile, CI/CD,
-            Automated Testing
-          </div>
-          <div>
-            <span className="font-medium">Quant:</span> Market microstructure,
-            risk, time series, small simulations in Python; probability and
-            implementation speed practice
-          </div>
-          <div>
-            <span className="font-medium">Competitions:</span> Codeforces,
-            Kaggle, LeetCode
-          </div>
-        </div>
+      {/* Volunteering */}
+      <section className="space-y-2 mb-10">
+        <h2 className="text-2xl">Volunteering</h2>
+        <ul className="text-gray-700 space-y-2">
+          <li>
+            <span className="font-medium">Westhill Community Support</span> —
+            Frontend/Platform · 2025–Now
+            <div className="text-sm">
+              Next.js/React, IA/accessibility, deployment & monitoring.
+            </div>
+          </li>
+          <li>
+            <span className="font-medium">GDSC Unilag</span> — Frontend Engineer
+            · 2023–Now
+            <div className="text-sm">
+              Community projects, workshops and hackathons.
+            </div>
+          </li>
+          <li>
+            <span className="font-medium">Cleva</span> — Campus Ambassador ·
+            ongoing
+            <div className="text-sm">
+              Campus outreach and student engagement for Cleva's fintech
+              programs.
+            </div>
+          </li>
+          <li>
+            <span className="font-medium">Cowrywise</span> — Campus Ambassador ·
+            ongoing
+            <div className="text-sm">
+              Promote financial literacy and product adoption among students.
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section className="space-y-2 mb-8">
