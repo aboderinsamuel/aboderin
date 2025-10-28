@@ -27,7 +27,7 @@ export function Me() {
           </li>
           <li>
             <span className="font-medium">Westhill Community Support</span> —
-            Frontend/Platform · 2025–Now
+            Frontend/Platform · 2025–2025
             <div className="text-sm">
               Next.js/React, IA/accessibility, deployment & monitoring.
             </div>
