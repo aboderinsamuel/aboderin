@@ -13,6 +13,16 @@ export function Credentials() {
       <h1 className="text-4xl sm:text-5xl mb-8">Credentials</h1>
 
       <ul className="list-disc pl-6 text-gray-700 space-y-2">
+           <li>
+          <a
+            href="https://learn.nvidia.com/certificates?id=xbrJp7xMSWmj8aTF91Ldrg"
+            target="_blank"
+            rel="noreferrer"
+            className="underline text-gray-900"
+          >
+            NVIDIA — Enhancing Data Science Outcomes With Efficient Workflows
+          </a>
+        </li>
         <li>
           <a
             href="https://learn.nvidia.com/certificates?id=mt467AVmShubhwUBXy0XZg#"
@@ -32,7 +42,7 @@ export function Credentials() {
           >
             NVIDIA — Fundamentals of Deep Learning
           </a>
-        </li>
+        </li>     
         <li>
           <a
             href="https://www.coursera.org/account/accomplishments/specialization/certificate/4XP6LOLME5CU"

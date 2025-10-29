@@ -11,9 +11,9 @@ export function Home() {
       className="max-w-3xl mx-auto px-4 sm:px-8 py-16"
     >
       <section className="mb-20">
-        <h1 className="text-4xl sm:text-5xl mb-6">ml · swe · quant</h1>
+        <h1 className="text-4xl sm:text-5xl mb-6">ml · swe · embedded</h1>
         <p className="text-lg text-gray-600 mb-10">
-          I build backend systems and study markets. I prefer simple designs,
+          Computer Engineering major, I build software and enjoy studying financial markets. I prefer simple designs,
           careful testing, and clear interfaces.
         </p>
 

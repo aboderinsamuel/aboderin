@@ -75,7 +75,7 @@ export function Me() {
             University of Lagos Akoka, Lagos, Nigeria
           </div>
           <div>
-            BSc. Computer Engineering — Second Class Upper (UK 2:1 Equivalent)
+            BSc. Computer Engineering
           </div>
           <div className="text-sm">January 2022 – May 2027 (Expected)</div>
           <div className="text-sm mt-2">
